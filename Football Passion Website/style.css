@@ -1,0 +1,337 @@
+/* Variable Declarations using root {} to define global CSS variables that can be accessed and used throughout CSS code*/
+:root{
+    --white: #f9f9f9;
+    --black: #36383F;
+    --grey: #85888C;
+}
+
+/* Resetting CSS with The universal selector * to remove default styles applied by browsers to different elements*/
+* {
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+  }
+
+html, body{
+    width: 100%;
+    background-color: var(--white);
+    font-family: sans-serif;
+    display: grid;
+    
+  }
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+.header{
+    background-color: var(--black);
+    box-shadow: 1px 1px 5px 0px var(--grey);
+    position: sticky;
+    width: 100%;
+    height: 60px; 
+    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+/* Logo */
+.logo{
+    display: inline-block;
+    color: var(--white);
+    font-size: 27px;
+    margin-left: 10px;
+    margin-top: 15px;
+
+}
+
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+    
+}
+
+.menu a{
+    display: block;
+    padding: 30px;
+    color: var(--white);
+
+}
+
+.menu a:hover{
+    background-color: var(--grey);
+}
+
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before{
+    top: 5px;
+}
+
+.hamb-line::after{
+    top: -5px;
+}
+
+
+.side-menu {
+    display: none;
+}
+
+/* Toggle menu icon */
+
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .content {
+    width: 90%;
+   }
+  
+  
+section.container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    padding: 100px 20px;
+    align-content: stretch;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(226, 219, 219);
+  }
+  
+  main {
+    
+    width: 100%;
+    min-height: auto;
+    background-color: rgb(29, 130, 148);
+  }
+  
+section {
+    padding: 100px 200px;
+    background: rgb(226, 219, 219);
+  }
+
+  p {
+    text-align: justify;
+    font-size: 15px;
+  }
+
+   .videos {
+    width: 167%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 10px;
+  }
+
+  .images {
+    width: 182%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 10px;
+  }
+
+  img {
+    width: 60%;
+    margin-bottom: 10px;
+  }
+
+  video  {
+    width: 60%;
+    margin-bottom: 10px;
+  }
+  
+  
+  p {
+    text-align: justify;
+
+      }
+  
+  h3 {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  
+footer {
+    background-color: #e1f3f8;
+    color: #212121;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3em;
+    font-weight: 600;
+    
+  }
+  
+ 
+  
+ /* Responsiveness to adapt to different viewport sizes */
+
+/* Styles specific to devices with a maximum width of 767px (e.g., smartphones) */
+ @media (max-width: 767px) {
+    
+  
+    /* Modify the header */
+    .header {
+      height: 80px; /* Increase the height of the header for better visibility */
+    }
+  
+    /* Adjust the logo size */
+    .logo {
+      font-size: 22px; /* Decrease the font size of the logo for better fit */
+    }
+  
+    /* Modify the menu */
+    .menu a {
+      padding: 20px; /* Decrease the padding of menu items for better spacing */
+    }
+  
+    /* Adjust the container layout */
+    .container {
+      flex-direction: column; /* Switch to a vertical layout for content sections */
+      padding: 40px 20px; /* Increase the padding for better spacing */
+    }
+  
+    /* Adjust the image and video sizes */
+    .images img,
+    .videos video {
+      width: 100%; /* Make images and videos fill the container width */
+    }
+  }
+
+@media (min-width: 768px) {
+
+    .header {
+        height: 100px; /* Increase the height of the header for better visibility */
+      }
+
+        /* Adjust the logo size */
+    .logo {
+    font-size: 25px; /* Decrease the font size of the logo for better fit */
+        }
+
+    .section.container {
+        flex-direction: column;
+        display: block;
+       
+    }
+
+      /* Modify the menu */
+  .menu a {
+    padding: 25px; /* Adjust the padding of menu items for better spacing */
+  }
+
+  /* Adjust the container layout */
+  .container {
+    padding: 60px 40px; /* Increase the padding for better spacing */
+  }
+
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li{
+        float: left;
+    }
+
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--grey);
+        
+    }
+   
+    .hamb{
+        display: none;
+    }
+
+    .img {
+        width: 100;
+    }
+
+    .videos {
+        width: 200;
+    }
+
+    footer {
+        text-align: left;
+        padding: 20px 40px;
+      }
+  } 
+
+  .images img,
+  .videos video {
+    width: 80%; 
+  } 
+
+  

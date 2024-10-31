@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- It's good practice to include the lang attribute to specify the language of the document -->
+<html lang="en">
+  <head>
+     <!-- Meta tags are HTML elements that provide metadata or information about a web page -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" />
+
+    <!-- Website title this helps both usability and search engine optimization-->
+    <title>About Football</title>
+
+    <!-- Link css file -->
+    <link rel="stylesheet" href="style.css" />
+
+   <!-- Favicon to enhance the visual appeal and recognition of the website -->
+   <link rel="icon" href="imgs/footbal-Favicon.ico" type="image/x-icon" />
+     
+  </head>
+  <body>
+    <!-- Skip Navigation Link to improve accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation bar -->
+    <header class="header">
+      <!-- Logo -->
+      <a href="#" class="logo">Football Passion</a>
+
+      <!-- Hamburger icon -->
+      <input class="side-menu" type="checkbox" id="side-menu" />
+      <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+      <!-- Menu -->
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Football" target="_blank">Wikipedia Football</a></li>
+          <li><a href="about.html">About Football</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+
+       <!-- Skip Navigation by calling id="main-content"  -->
+      <main id="main-content">
+
+        <!-- A couple of sections with container class to add some videos and text to the website as per the requirements. -->
+      <section class="container">
+        <div class="videos">
+          <video controls width="450">
+            <source src="videos/LaLiga Week 32  Beyond Stats -Audio Descriptions.mp4" />
+            This browser does not support HTML5 audio
+          </video>
+          <br />
+        </div>
+        <div class="content">
+          <h2>Football Videos</h2>
+          <br />
+          <p>
+            This captivating video, which gained widespread attention and praise, is a result of an exciting partnership
+            between La Liga and Microsoft Corporation. Through this collaboration, the two entities aimed to deliver
+            innovative and immersive experiences to football enthusiasts around the globe. Microsoft's technological
+            expertise and La Liga's passion for the sport came together, resulting in the creation of this engaging
+            visual content.
+            <a href="https://www.youtube.com/watch?v=bm5jUUSdD9Q" target="_blank">Link to original video</a>
+          </p>
+        </div>
+      </section>
+      <section class="container">
+        <div class="content">
+          <h2>Football: A Passion That Transcends Boundaries</h2>
+          <br />
+          <p>
+            Football, the beautiful game, transcends boundaries and unites people from all walks of life. It is not
+            merely a sport but a passion that ignites our souls. The thrill of watching our favorite teams battling on
+            the field, the adrenaline rush as the ball dances across the grass, and the euphoria of witnessing a goal
+            being scored; these moments weave a tapestry of emotions that captivate us. Whether we play it ourselves or
+            cheer from the stands, football is a hobby that captures our hearts, fueling our love for the game. With
+            every touch of the ball, we experience a profound sense of joy, forging unforgettable memories that bind us
+            to this timeless sport.
+          </p>
+          <br />
+          <h3>Addtional links for external websites:</h3>
+          <br />
+          <ul>
+            <li><a href="https://www.fifa.com" target="_blank">FIFA Offcial Website</a></li>
+            <li><a href="https://www.thefa.com/" target="_blank">The FA Association</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+        <!-----------footer -------->
+    <footer>
+      <p> University of Liverpool CSCK543 Networks and Web Technology Mid-Module Assignment </p>
+    </footer>
+
+  </body>
+</html>
